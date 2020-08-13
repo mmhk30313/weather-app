@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Website From Mahadi</title>
+    <link rel="shortcut icon" href="weather_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9aad0ebe25.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <section class="weather">
+        <div id="w-img" class="weather-image"><img class="img-beauty" src="unknown.png"></div>
+        <button onclick="setQuery(13)" type="submit" id="search-icon"><i class="fa fa-search"></i></button>
+        <input type="text" class="input-city form-control" id="city-name" placeholder="Search for a city">
+            <div class="details">
+                <p id="city-location">City, State</p>
+                <h5 id="date"></h5>
+                <h1 id="cur-temperature">&degc</h1>
+                <h6 id="w-description">unknown weather</h6>
+                <h5 id="low-high">&degc / &degc</h5>
+            </div>
+    </section>
+    
+    <script>
+        date = document.getElementById('date');
+        const now = new Date();
+    // console.log(now,'\n',now.getDay());
+        date.innerText = dateBuilder(now);
+        function dateBuilder (d) {
+            let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            //d => (new Date()) current time...
+            let day = days[d.getDay()];//d.getDay() returns n-th day of the week... 
+            let date = d.getDate();//d.getDate() returns n-th day of the month... 
+            let month = months[d.getMonth()];//d.getMonth() returns n-th day of the year... 
+            let year = d.getFullYear();//d.getFullYear() returns the current year... 
+        
+            return `${day} ${date} ${month} ${year}`;
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

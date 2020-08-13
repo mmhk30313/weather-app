@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'montserrat', sans-serif !important;
+    background-image:linear-gradient(
+        to bottom, rgba(0,0,0,0.3),rgba(0,0,0,0.3)
+    ), url('bg3.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    color: #FFF !important;
+    text-shadow: 2px 12px rgba(0,0,0,0.8);
+    min-height: 89.8vh;
+}
+#cur-temperature{
+    font-weight: 1000 !important;
+}
+button{
+    
+    border: none;
+    padding: 1px 5px;
+    transform: translate(-420%,125%);
+    color: rgb(26, 148, 182);
+    background-color: #FFFFFF;
+    background-color: rgba(255,255,255,0.0);
+}
+button:focus{
+    outline: none !important;
+    border: none !important;
+}
+.weather input{
+    width: 300px;
+    border-radius: 16px 0 16px 0;
+    padding-left: 50px;
+    color: rgb(220, 209, 201);
+    border-bottom:5px solid goldenrod !important;
+    background-color: rgba(255,255,255,0.1);
+}
+.weather input:focus{
+    border: 2px solid coral !important;
+    outline: none !important;
+    background-color: rgba(255,255,255,0.1);
+    color: rgb(220, 209, 201);
+}
+.details{
+    text-align: center;
+   
+    margin-top: 35px;
+    
+}
+body .weather{
+    margin: 80px auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 15px rgb(221, 214, 214);
+    border-radius: 24px 5px 24px 5px;
+    width: 470px;
+    height: 600px;
+    padding-top: 35px;
+    background-color: rgba(0,0,0,0.3);
+}
+.weather-image{
+    background-color: rgba(249, 253, 253, 0.387);
+    border-radius: 30%;
+    width: 40%;
+    text-align: center;
+    color: white;
+}
+.img-beauty{
+    animation: float 1s ease-out infinite;
+}
+@keyframes float {
+    /* 50% {
+       transform: translate(0, 10px);
+    } */
+    /* 50% {
+       transform: translate(0, -10px);
+    } */
+    50% {
+       transform: scale(1.1);
+    }
+}
+.details h2, .details h3, .details h5, .details h6{
+    margin-top: 26px;
+}
