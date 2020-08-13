@@ -12,15 +12,15 @@ const searchBox = document.querySelector('.weather .input-city');
 searchBox.addEventListener('keypress', setQuery);
 
 function setQuery(evt){
-    if(evt.keyCode == 13 || evt == 13){//13 ->key code of the Enter button from computer keyboard
+    if(evt.keyCode == 13 || evt == 'click'){//13 ->key code of the Enter button from computer keyboard
         getResults(searchBox.value);
         // console.log(searchBox.value);
     }
 }
 
 function getResults(query){
-    // fetch('https://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&appid=a0943bfbb8f7a953372cfc193a5244fa')
-    fetch(`${api.base}weather?q=${query}&appid=${api.key}`)
+    fetch('http://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&appid=a0943bfbb8f7a953372cfc193a5244fa')
+    // fetch(`${api.base}weather?q=${query}&appid=${api.key}`)
     .then(response => response.json())
     // .then(data => 
     //     // console.log(data)
