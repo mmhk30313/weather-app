@@ -19,7 +19,7 @@ function setQuery(evt){
 }
 
 function getResults(query){
-    fetch('http://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&appid=a0943bfbb8f7a953372cfc193a5244fa')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&appid=a0943bfbb8f7a953372cfc193a5244fa')
     // fetch(`${api.base}weather?q=${query}&appid=${api.key}`)
     .then(response => response.json())
     // .then(data => 
@@ -30,7 +30,7 @@ function getResults(query){
         // console.log(data);
         displayResults(data);
     })
-    .catch(err => alert('Wrong City'))
+    // .catch(err => alert('Wrong City'))
 }
 
 const locationCity = document.getElementById('city-location');
